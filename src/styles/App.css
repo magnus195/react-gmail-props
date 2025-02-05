@@ -144,3 +144,81 @@
 .email .star-checkbox:checked::before {
   background-image: url(https://www.gstatic.com/images/icons/material/system/2x/star_googyellow500_20dp.png);
 }
+
+.avatar {
+  width: 56px;
+  height: 56px;
+
+  border-radius: 100%;
+  background-color: #eee;
+}
+
+.email-view {
+  margin-top: 0.5rem;
+}
+
+.email-view > header {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  padding: 10px;
+  border-bottom: solid 1px #00000020;
+}
+
+.email-info {
+  padding: 0 1rem;
+}
+
+.sender-info > h2 {
+  display: inline-block;
+  font-size: 0.9rem;
+}
+
+.sender-info > em {
+  margin-left: 0.5rem;
+  font-size: 1rem;
+}
+
+.email-info > .user-info {
+  margin-top: 0.7rem;
+  font-size: 0.7rem;
+  color: #777;
+}
+
+.email-view .title h1 {
+  margin-left: 4rem;
+}
+
+.icons > ul {
+  list-style: none;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 0.2rem;
+  justify-content: right;
+}
+
+.email-view .date-info {
+  padding: 0 1rem;
+}
+
+.email-body > .content {
+  max-width: 700px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.email-body > .content * {
+  max-width: 100%;
+}
+
+.email-actions button {
+  padding: 0.5rem 1rem;
+  margin-right: 0.5rem;
+  border: 1px solid #aaa;
+  border-radius: 0.5rem;
+  background-color: transparent;
+}
+
+.email-navbar {
+    padding: 10px;
+    border-bottom: solid 1px #00000020;
+}

@@ -23,8 +23,8 @@ function Email(props) {
                     onChange={() => props.toggleStar(email)}
                 />
             </div>
-            <div className="sender">{email.sender}</div>
-            <div className="title">{email.title}</div>
+            <div className="sender" onClick={props.selectEmail}>{email.sender}</div>
+            <div className="title" onClick={props.selectEmail}>{email.title}</div>
         </li>
     );
 }
