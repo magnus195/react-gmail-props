@@ -1,5 +1,3 @@
-import React from 'react';
-
 function Email(props) {
     const email = props.email;
     return (

@@ -1,4 +1,3 @@
-import React from 'react';
 import Email from "./Email.jsx";
 
 function Emails(props) {
