@@ -10,11 +10,14 @@ const getReadEmails = emails => emails.filter(email => !email.read)
 
 const getStarredEmails = emails => emails.filter(email => email.starred)
 
+const getEmailWithSearch = (emails, search) => emails.filter(e => e.title.toLowerCase().includes(search.toLowerCase()))
+
 function App() {
     const [emails, setEmails] = useState(initialEmails)
     const [hideRead, setHideRead] = useState(false)
     const [currentTab, setCurrentTab] = useState('inbox')
     const [selectedEmail, setSelectedEmail] = useState(null)
+    const [query, setQuery] = useState('')
 
     const unreadEmails = emails.filter(email => !email.read)
     const starredEmails = emails.filter(email => email.starred)
@@ -44,6 +47,8 @@ function App() {
     if (currentTab === 'starred')
         filteredEmails = getStarredEmails(filteredEmails)
 
+    if (query) filteredEmails = getEmailWithSearch(filteredEmails, query)
+
     return (
         <div className="app">
             <header className="header">
@@ -59,7 +64,8 @@ function App() {
                 </div>
 
                 <div className="search">
-                    <input className="search-bar" placeholder="Search mail"/>
+                    <input className="search-bar" value={query} onChange={e => setQuery(e.target.value)}
+                           placeholder="Search mail"/>
                 </div>
             </header>
             <nav className="left-menu">
